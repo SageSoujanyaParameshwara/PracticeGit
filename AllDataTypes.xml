@@ -1,0 +1,1181 @@
+<BusinessProcessVersion type="ImportExportBusinessProcessVersion" sc-version="3">
+  <TemplateSubstitutionValue>TBD</TemplateSubstitutionValue>
+  <DocumentTitleTemplate>[GLOBAL_BUSINESSPROCESSBPID] - [GLOBAL_OWNERFIRSTNAME] [GLOBAL_OWNERLASTNAME] - [GLOBAL_STATEDISPLAYNAME]</DocumentTitleTemplate>
+  <ReferenceCodeTemplate>ADT[GLOBAL_URN]</ReferenceCodeTemplate>
+  <DocumentCanBeCreatedByProxy>True</DocumentCanBeCreatedByProxy>
+  <TransitionNotAvailableNotificationPolicy value="ShowDefaultAndCustomMessages" />
+  <Schema type="Schema">
+    <Definition sid="AllDataTypes" type="SchemaRoot">
+      <DisplayName>Demonstrate all data types</DisplayName>
+      <Description></Description>
+      <Sections>
+        <Section sid="AttachmentDataTypesSection" type="SchemaSection">
+          <DisplayName>Attachment DataTypes Section</DisplayName>
+          <Description></Description>
+          <SchemaElements>
+            <SchemaElement sid="AttachmentDt" type="Attachment" sc-version="2">
+              <DisplayName>Attachment</DisplayName>
+              <Description></Description>
+              <CustomErrorMessage>Custom Error</CustomErrorMessage>
+              <IsMandatory>False</IsMandatory>
+              <IsTitleMandatory>False</IsTitleMandatory>
+              <MaxFileSize>5000</MaxFileSize>
+              <AllowedFileExtensions></AllowedFileExtensions>
+            </SchemaElement>
+            <SchemaElement sid="MultiAttachmentDt" type="MultiAttachment" sc-version="2">
+              <DisplayName>Multi Attachment</DisplayName>
+              <Description></Description>
+              <CustomErrorMessage>Custom Error</CustomErrorMessage>
+              <IsMandatory>False</IsMandatory>
+              <IsTitleMandatory>False</IsTitleMandatory>
+              <MaxFileSize>5000</MaxFileSize>
+              <AllowedFileExtensions></AllowedFileExtensions>
+            </SchemaElement>
+          </SchemaElements>
+        </Section>
+        <Section sid="BasicDataTypesSection" type="SchemaSection">
+          <DisplayName>Basic DataTypes Section</DisplayName>
+          <Description></Description>
+          <SchemaElements>
+            <SchemaElement sid="BooleanDt" type="Boolean" sc-version="2">
+              <DisplayName>Boolean</DisplayName>
+              <Description></Description>
+              <CustomErrorMessage>Custom Error</CustomErrorMessage>
+              <DefaultValue>True</DefaultValue>
+              <ValueRequirement value="NoRequirement" />
+            </SchemaElement>
+            <SchemaElement sid="DecimalDt" type="Decimal">
+              <DisplayName>Decimal</DisplayName>
+              <Description></Description>
+              <CustomErrorMessage>Custom Error</CustomErrorMessage>
+              <MinValue>0</MinValue>
+              <MaxValue>500</MaxValue>
+              <IsMandatory>False</IsMandatory>
+              <DecimalPrecision>6</DecimalPrecision>
+              <DecimalScale>3</DecimalScale>
+            </SchemaElement>
+            <SchemaElement sid="IntegerDt" type="Integer">
+              <DisplayName>Integer</DisplayName>
+              <Description></Description>
+              <CustomErrorMessage>Custom Error</CustomErrorMessage>
+              <MinValue>0</MinValue>
+              <MaxValue>3</MaxValue>
+              <IsMandatory>False</IsMandatory>
+            </SchemaElement>
+            <SchemaElement sid="ListDt" type="List">
+              <DisplayName>List</DisplayName>
+              <Description></Description>
+              <CustomErrorMessage>Custom Error</CustomErrorMessage>
+              <IsMandatory>False</IsMandatory>
+              <ListBusinessKey>TypesOfCloud</ListBusinessKey>
+            </SchemaElement>
+            <SchemaElement sid="MemoDt" type="Memo">
+              <DisplayName>Memo</DisplayName>
+              <Description></Description>
+              <CustomErrorMessage>Custom Error</CustomErrorMessage>
+              <MinLength>0</MinLength>
+              <MaxLength>100</MaxLength>
+              <Pattern>[A-Z]</Pattern>
+              <IsMandatory>False</IsMandatory>
+            </SchemaElement>
+            <SchemaElement sid="MultiTextListDt" type="MultiTextList">
+              <DisplayName>Multi Text List</DisplayName>
+              <Description></Description>
+              <CustomErrorMessage>Custom Error</CustomErrorMessage>
+              <IsMandatory>False</IsMandatory>
+              <DisplayValuePairs>
+                <DisplayDecimalValuePair type="DisplayValuePair">
+                  <Display>One</Display>
+                  <Value>One</Value>
+                </DisplayDecimalValuePair>
+                <DisplayDecimalValuePair type="DisplayValuePair">
+                  <Display>Two</Display>
+                  <Value>Two</Value>
+                </DisplayDecimalValuePair>
+                <DisplayDecimalValuePair type="DisplayValuePair">
+                  <Display>Three</Display>
+                  <Value>Three</Value>
+                </DisplayDecimalValuePair>
+              </DisplayValuePairs>
+            </SchemaElement>
+            <SchemaElement sid="PercentageDt" type="Percentage">
+              <DisplayName>Percentage</DisplayName>
+              <Description></Description>
+              <CustomErrorMessage>Custom Error</CustomErrorMessage>
+              <IsMandatory>False</IsMandatory>
+            </SchemaElement>
+            <SchemaElement sid="TextDt" type="Text">
+              <DisplayName>Text</DisplayName>
+              <Description></Description>
+              <CustomErrorMessage>Custom Error</CustomErrorMessage>
+              <MinLength>0</MinLength>
+              <MaxLength>100</MaxLength>
+              <LiteralPattern>[a-z]</LiteralPattern>
+              <IsMandatory>False</IsMandatory>
+            </SchemaElement>
+            <SchemaElement sid="TextListDt" type="TextList">
+              <DisplayName>Text List</DisplayName>
+              <Description></Description>
+              <CustomErrorMessage>Custom Error</CustomErrorMessage>
+              <IsMandatory>False</IsMandatory>
+              <DisplayValuePairs>
+                <DisplayStringValuePair type="DisplayValuePair">
+                  <Display>One</Display>
+                  <Value>One</Value>
+                </DisplayStringValuePair>
+                <DisplayStringValuePair type="DisplayValuePair">
+                  <Display>Two</Display>
+                  <Value>Two</Value>
+                </DisplayStringValuePair>
+                <DisplayStringValuePair type="DisplayValuePair">
+                  <Display>Three</Display>
+                  <Value>Three</Value>
+                </DisplayStringValuePair>
+              </DisplayValuePairs>
+            </SchemaElement>
+          </SchemaElements>
+        </Section>
+        <Section sid="CompositeDataTypesSection" type="SchemaSection">
+          <DisplayName>Composite DataTypes Section</DisplayName>
+          <Description></Description>
+          <SchemaElements>
+            <SchemaElement sid="WebAddressDt" type="WebAddress">
+              <DisplayName>Web Address</DisplayName>
+              <Description></Description>
+              <CustomErrorMessage>Custom Error</CustomErrorMessage>
+              <IsMandatory>False</IsMandatory>
+            </SchemaElement>
+          </SchemaElements>
+        </Section>
+        <Section sid="DateTimeDataTypesSection" type="SchemaSection">
+          <DisplayName>Date Time DataTypes Section</DisplayName>
+          <Description></Description>
+          <SchemaElements>
+            <SchemaElement sid="DateDt" type="Date">
+              <DisplayName>Date</DisplayName>
+              <Description></Description>
+              <CustomErrorMessage>Custom Error</CustomErrorMessage>
+              <IsMandatory>False</IsMandatory>
+            </SchemaElement>
+            <SchemaElement sid="DateTimeDt" type="DateTime">
+              <DisplayName>Datetime</DisplayName>
+              <Description></Description>
+              <CustomErrorMessage>Custom Error</CustomErrorMessage>
+              <IsMandatory>True</IsMandatory>
+              <DataCapture value="DateTime" />
+            </SchemaElement>
+            <SchemaElement sid="PeriodFrequencyDt" type="PeriodFrequency">
+              <DisplayName>Period Frequency</DisplayName>
+              <Description></Description>
+              <CustomErrorMessage>Custom Error</CustomErrorMessage>
+              <IsMandatory>False</IsMandatory>
+            </SchemaElement>
+            <SchemaElement sid="TimeZoneDateTimeDt" type="TimeZoneDateTime">
+              <DisplayName>Timezone Datetime</DisplayName>
+              <Description></Description>
+              <CustomErrorMessage>Custom Error</CustomErrorMessage>
+              <IsMandatory>False</IsMandatory>
+              <DataCapture value="DateTime" />
+            </SchemaElement>
+          </SchemaElements>
+        </Section>
+        <Section sid="DomainDataTypesSection" type="SchemaSection">
+          <DisplayName>Domain DataTypes section</DisplayName>
+          <Description></Description>
+          <SchemaElements>
+            <SchemaElement sid="AutoLineOfBusinessDt" type="AutoLineOfBusiness" sc-version="2">
+              <DisplayName>AutoLineOfBusiness</DisplayName>
+              <Description></Description>
+              <CustomErrorMessage>Custom Error</CustomErrorMessage>
+              <AutoSetOnInitialization>True</AutoSetOnInitialization>
+              <AutoSetOnSectionValidated>False</AutoSetOnSectionValidated>
+              <AutoSetOnLoad>False</AutoSetOnLoad>
+              <UserAccountToSet type="UserAccountSubject">
+                <WhichUserToSet value="DocumentOwner" />
+              </UserAccountToSet>
+            </SchemaElement>
+            <SchemaElement sid="AutoOfficeDt" type="AutoOffice" sc-version="2">
+              <DisplayName>AutoOffice</DisplayName>
+              <Description></Description>
+              <CustomErrorMessage>Custom Error</CustomErrorMessage>
+              <AutoSetOnInitialization>True</AutoSetOnInitialization>
+              <AutoSetOnSectionValidated>False</AutoSetOnSectionValidated>
+              <AutoSetOnLoad>False</AutoSetOnLoad>
+              <UserAccountToSet type="UserAccountSubject">
+                <WhichUserToSet value="DocumentOwner" />
+              </UserAccountToSet>
+            </SchemaElement>
+            <SchemaElement sid="AutoUserAccountDt" type="AutoUserAccount" sc-version="2">
+              <DisplayName>AutoUserAccount</DisplayName>
+              <Description></Description>
+              <CustomErrorMessage>Custom Error</CustomErrorMessage>
+              <AutoSetOnInitialization>True</AutoSetOnInitialization>
+              <AutoSetOnSectionValidated>False</AutoSetOnSectionValidated>
+              <AutoSetOnLoad>False</AutoSetOnLoad>
+              <UserAccountToSet type="UserAccountSubject">
+                <WhichUserToSet value="DocumentCreator" />
+              </UserAccountToSet>
+            </SchemaElement>
+            <SchemaElement sid="GridReportingDataType" type="GridDataType" sc-version="2">
+              <DisplayName>GridReportingDataType</DisplayName>
+              <Description>GridReportingDataType</Description>
+              <CustomErrorMessage></CustomErrorMessage>
+              <AutoSetOnInitialization>True</AutoSetOnInitialization>
+              <AutoSetOnSectionValidated>False</AutoSetOnSectionValidated>
+              <NumberOfRecordsPerPage>10</NumberOfRecordsPerPage>
+              <AutoSetOnLoad>False</AutoSetOnLoad>
+              <Query type="Query">
+                <ConnectionStringKey>StarDefault</ConnectionStringKey>
+                <Statement>select FirstName, LastName from Shared_UserAccount</Statement>
+                <Parameters />
+              </Query>
+              <Fields>
+                <Field type="Field">
+                  <Name>firstNameField</Name>
+                  <QueryColumn>FirstName</QueryColumn>
+                  <Encrypt>False</Encrypt>
+                </Field>
+                <Field type="Field">
+                  <Name>lastNameField</Name>
+                  <QueryColumn>LastName</QueryColumn>
+                  <Encrypt>False</Encrypt>
+                </Field>
+              </Fields>
+              <Grids>
+                <Grid type="Grid">
+                  <Name>FirstGrid</Name>
+                  <IsDefault>True</IsDefault>
+                  <SortByFieldRef type="Tid">
+                    <Tid>firstNameField</Tid>
+                  </SortByFieldRef>
+                  <GridColumns>
+                    <GridColumn type="ValueGridColumn" sc-version="2">
+                      <Order>0</Order>
+                      <FieldRef>firstNameField</FieldRef>
+                      <IsSortable>True</IsSortable>
+                    </GridColumn>
+                    <GridColumn type="ValueGridColumn" sc-version="2">
+                      <Order>1</Order>
+                      <FieldRef>lastNameField</FieldRef>
+                      <IsSortable>True</IsSortable>
+                    </GridColumn>
+                  </GridColumns>
+                </Grid>
+              </Grids>
+            </SchemaElement>
+            <SchemaElement sid="ContactDt" type="Contact">
+              <DisplayName>Contact</DisplayName>
+              <Description></Description>
+              <CustomErrorMessage>Custom Error</CustomErrorMessage>
+              <IsMandatory>False</IsMandatory>
+            </SchemaElement>
+            <SchemaElement sid="CountryDt" type="Country">
+              <DisplayName>Country</DisplayName>
+              <Description></Description>
+              <CustomErrorMessage>Custom Error</CustomErrorMessage>
+              <IsMandatory>False</IsMandatory>
+            </SchemaElement>
+            <SchemaElement sid="MoneyDt" type="Money">
+              <DisplayName>Money</DisplayName>
+              <Description></Description>
+              <CustomErrorMessage>Custom Error</CustomErrorMessage>
+              <MinValue>0</MinValue>
+              <MaxValue>100</MaxValue>
+              <DefaultCurrencyCodeOption value="UseCurrentUser" />
+              <IsMandatory>False</IsMandatory>
+            </SchemaElement>
+            <SchemaElement sid="MultiContactDt" type="MultiContact">
+              <DisplayName>MultiContact</DisplayName>
+              <Description></Description>
+              <CustomErrorMessage>Custom Error</CustomErrorMessage>
+              <IsMandatory>False</IsMandatory>
+              <SingleOrganizationOnly>False</SingleOrganizationOnly>
+            </SchemaElement>
+            <SchemaElement sid="MultiOrganizationDt" type="MultiOrganization">
+              <DisplayName>Multi Organization</DisplayName>
+              <Description></Description>
+              <CustomErrorMessage>Custom Error</CustomErrorMessage>
+              <IsMandatory>False</IsMandatory>
+            </SchemaElement>
+            <SchemaElement sid="MultiUserDt" type="MultiUserAccount">
+              <DisplayName>MultiUser</DisplayName>
+              <Description></Description>
+              <CustomErrorMessage>Custom Error</CustomErrorMessage>
+              <IsMandatory>False</IsMandatory>
+              <EnforceOfficeVisibility>False</EnforceOfficeVisibility>
+            </SchemaElement>
+            <SchemaElement sid="MultiBusinessProcessDt" type="MultiBusinessProcess">
+              <DisplayName>MultiBusinessProcess</DisplayName>
+              <Description></Description>
+              <CustomErrorMessage>Custom Error for MultiUserAccountDataType</CustomErrorMessage>
+              <IsMandatory>False</IsMandatory>
+              <ResolveBusinessProcessesForUser value="CurrentUser" />
+            </SchemaElement>
+            <SchemaElement sid="OfficeDt" type="Office">
+              <DisplayName>Office</DisplayName>
+              <Description></Description>
+              <CustomErrorMessage>Custom Error</CustomErrorMessage>
+              <IsMandatory>False</IsMandatory>
+            </SchemaElement>
+            <SchemaElement sid="OrganizationDt" type="Organization">
+              <DisplayName>Organization</DisplayName>
+              <Description></Description>
+              <CustomErrorMessage>Custom Error</CustomErrorMessage>
+              <IsMandatory>False</IsMandatory>
+            </SchemaElement>
+            <SchemaElement sid="PersonaMemberDt" type="PersonaMember">
+              <DisplayName>Persona Member</DisplayName>
+              <Description></Description>
+              <CustomErrorMessage>Custom Error</CustomErrorMessage>
+              <IsMandatory>False</IsMandatory>
+              <EnforceOfficeVisibility>False</EnforceOfficeVisibility>
+              <PersonaWid>Compliance</PersonaWid>
+            </SchemaElement>
+            <SchemaElement sid="SecurityDt" type="Security">
+              <DisplayName>Security</DisplayName>
+              <Description></Description>
+              <CustomErrorMessage>Custom Error</CustomErrorMessage>
+              <IsMandatory>False</IsMandatory>
+            </SchemaElement>
+            <SchemaElement sid="UserAccountDt" type="UserAccount" sc-version="2">
+              <DisplayName>UserAccount</DisplayName>
+              <Description></Description>
+              <CustomErrorMessage>Custom Error</CustomErrorMessage>
+              <IsMandatory>False</IsMandatory>
+              <EnforceOfficeVisibility>True</EnforceOfficeVisibility>
+              <AutoSetOnInitialization>True</AutoSetOnInitialization>
+              <AutoSetOnSectionValidated>False</AutoSetOnSectionValidated>
+              <AutoSetOnLoad>False</AutoSetOnLoad>
+              <UserAccountToSet type="UserAccountSubject">
+                <WhichUserToSet value="DocumentOwner" />
+              </UserAccountToSet>
+            </SchemaElement>
+            <SchemaElement sid="UserGroupDt" type="UserGroup">
+              <DisplayName>User Group</DisplayName>
+              <Description></Description>
+              <CustomErrorMessage>Custom User Group Error</CustomErrorMessage>
+              <IsMandatory>False</IsMandatory>
+              <HideSystemUserGroups>False</HideSystemUserGroups>
+            </SchemaElement>
+            <SchemaElement sid="MultiUserGroupDt" type="MultiUserGroup">
+              <DisplayName>Multiple User Groups</DisplayName>
+              <Description></Description>
+              <CustomErrorMessage>Customer Multi User Group Error</CustomErrorMessage>
+              <IsMandatory>False</IsMandatory>
+              <HideSystemUserGroups>False</HideSystemUserGroups>
+            </SchemaElement>
+          </SchemaElements>
+        </Section>
+        <Section sid="TradingEntitiesDataTypesSection" type="SchemaSection">
+          <DisplayName>Trading Entities DataTypes Section</DisplayName>
+          <Description></Description>
+          <SchemaElements>
+            <SchemaElement sid="BrokerAccountNameDt" type="BrokerAccountName">
+              <DisplayName>Broker Account Name</DisplayName>
+              <Description></Description>
+              <CustomErrorMessage>Custom Error</CustomErrorMessage>
+              <IsMandatory>False</IsMandatory>
+            </SchemaElement>
+            <SchemaElement sid="BrokerAccountNumberDt" type="BrokerAccountNumber">
+              <DisplayName>Broker Account Number</DisplayName>
+              <Description></Description>
+              <CustomErrorMessage>Custom Error</CustomErrorMessage>
+              <IsMandatory>False</IsMandatory>
+            </SchemaElement>
+            <SchemaElement sid="BrokerAccountTypeDt" type="BrokerAccountType">
+              <DisplayName>Broker Account Type</DisplayName>
+              <Description></Description>
+              <CustomErrorMessage>Custom Error</CustomErrorMessage>
+              <IsMandatory>False</IsMandatory>
+              <ActiveOnly>True</ActiveOnly>
+            </SchemaElement>
+            <SchemaElement sid="BrokerOfficeDt" type="BrokerOffice">
+              <DisplayName>Broker Office</DisplayName>
+              <Description></Description>
+              <CustomErrorMessage>Custom Error</CustomErrorMessage>
+              <IsMandatory>False</IsMandatory>
+            </SchemaElement>
+          </SchemaElements>
+        </Section>
+      </Sections>
+      <ActionTargets />
+    </Definition>
+  </Schema>
+  <Workflow type="Workflow" sc-version="3" MaxPassthroughs="2">
+    <DocumentNotificationDisplayPolicy value="DisplayLast" />
+    <CreateEntityAssociationsOnDocumentSave>True</CreateEntityAssociationsOnDocumentSave>
+    <States>
+      <State wid="EditState" type="State" sc-version="5" Passthrough="False">
+        <DocumentStatus value="DoNotSet" />
+        <DisplayName>Edit State</DisplayName>
+        <Description></Description>
+        <ClearAcesOnExit>True</ClearAcesOnExit>
+        <ClearInboxOnExit>True</ClearInboxOnExit>
+        <DocumentNotificationDisplayPolicy value="NotSet" />
+        <PriorityCommand type="PriorityCommand">
+          <Operator value="NotSet" />
+          <Amount>0</Amount>
+        </PriorityCommand>
+        <StateFormSections>
+          <StateFormSection sc-id="EditSfs" type="GlobalStateFormSection" renderingOrder="0">
+            <GlobalFormSection fid="Header" type="GlobalFormSectionRef">
+              <GlobalID>f4ab7be5-9258-46a2-bb28-a5a600abbbf1</GlobalID>
+            </GlobalFormSection>
+          </StateFormSection>
+          <StateFormSection sc-id="EditAttachmentSfs" type="LocalStateFormSection" renderingOrder="1">
+            <LocalFormSection sc-ref="AttachmentLfs" type="SchemaLocalFormSection" />
+          </StateFormSection>
+          <StateFormSection sc-id="EditBasicSfs" type="LocalStateFormSection" renderingOrder="2">
+            <LocalFormSection sc-ref="BasicLfs" type="SchemaLocalFormSection" />
+          </StateFormSection>
+          <StateFormSection sc-id="EditCompositeSfs" type="LocalStateFormSection" renderingOrder="3">
+            <LocalFormSection sc-ref="CompositeLfs" type="SchemaLocalFormSection" />
+          </StateFormSection>
+          <StateFormSection sc-id="EditDateTimeSfs" type="LocalStateFormSection" renderingOrder="4">
+            <LocalFormSection sc-ref="DateTimeLfs" type="SchemaLocalFormSection" />
+          </StateFormSection>
+          <StateFormSection sc-id="EditDomainSfs" type="LocalStateFormSection" renderingOrder="5">
+            <LocalFormSection sc-ref="DomainLfs" type="SchemaLocalFormSection" />
+          </StateFormSection>
+          <StateFormSection sc-id="EditTradingSfs" type="LocalStateFormSection" renderingOrder="6">
+            <LocalFormSection sc-ref="TradingEntitiesLfs" type="SchemaLocalFormSection" />
+          </StateFormSection>
+        </StateFormSections>
+        <ControlConfigurations />
+        <StateAutoSetOnLoads />
+      </State>
+      <State wid="ViewState" type="State" sc-version="5" Passthrough="False">
+        <DocumentStatus value="DoNotSet" />
+        <DisplayName>View State</DisplayName>
+        <Description></Description>
+        <ClearAcesOnExit>True</ClearAcesOnExit>
+        <ClearInboxOnExit>True</ClearInboxOnExit>
+        <NoTransitionAvailableMessage>No Transition</NoTransitionAvailableMessage>
+        <DocumentNotificationDisplayPolicy value="NotSet" />
+        <ConditionalTransitionLabelText>Conditional</ConditionalTransitionLabelText>
+        <PriorityCommand type="PriorityCommand">
+          <Operator value="NotSet" />
+          <Amount>0</Amount>
+        </PriorityCommand>
+        <StateFormSections>
+          <StateFormSection sc-id="ViewSfs" type="GlobalStateFormSection" renderingOrder="0">
+            <GlobalFormSection fid="Header" type="GlobalFormSectionRef">
+              <GlobalID>f4ab7be5-9258-46a2-bb28-a5a600abbbf1</GlobalID>
+            </GlobalFormSection>
+          </StateFormSection>
+          <StateFormSection sc-id="ViewAttachmentSfs" type="LocalStateFormSection" renderingOrder="1">
+            <LocalFormSection sc-ref="AttachmentLfs" type="SchemaLocalFormSection" />
+          </StateFormSection>
+          <StateFormSection sc-id="ViewBasicSfs" type="LocalStateFormSection" renderingOrder="2">
+            <LocalFormSection sc-ref="BasicLfs" type="SchemaLocalFormSection" />
+          </StateFormSection>
+          <StateFormSection sc-id="ViewCompositeSfs" type="LocalStateFormSection" renderingOrder="3">
+            <LocalFormSection sc-ref="CompositeLfs" type="SchemaLocalFormSection" />
+          </StateFormSection>
+          <StateFormSection sc-id="ViewDateTimeSfs" type="LocalStateFormSection" renderingOrder="4">
+            <LocalFormSection sc-ref="DateTimeLfs" type="SchemaLocalFormSection" />
+          </StateFormSection>
+          <StateFormSection sc-id="ViewDomainSfs" type="LocalStateFormSection" renderingOrder="5">
+            <LocalFormSection sc-ref="DomainLfs" type="SchemaLocalFormSection" />
+          </StateFormSection>
+          <StateFormSection sc-id="ViewTradingSfs" type="LocalStateFormSection" renderingOrder="6">
+            <LocalFormSection sc-ref="TradingEntitiesLfs" type="SchemaLocalFormSection" />
+          </StateFormSection>
+        </StateFormSections>
+        <ControlConfigurations />
+        <StateAutoSetOnLoads />
+      </State>
+      <State wid="ClosedState" type="State" sc-version="5" Passthrough="False">
+        <DocumentStatus value="Complete" />
+        <DisplayName>Closed State</DisplayName>
+        <Description></Description>
+        <ClearAcesOnExit>True</ClearAcesOnExit>
+        <ClearInboxOnExit>True</ClearInboxOnExit>
+        <DocumentNotificationDisplayPolicy value="NotSet" />
+        <PriorityCommand type="PriorityCommand">
+          <Operator value="NotSet" />
+          <Amount>0</Amount>
+        </PriorityCommand>
+        <StateFormSections>
+          <StateFormSection sc-id="ClosedSfs" type="GlobalStateFormSection" renderingOrder="0">
+            <GlobalFormSection fid="Header" type="GlobalFormSectionRef">
+              <GlobalID>f4ab7be5-9258-46a2-bb28-a5a600abbbf1</GlobalID>
+            </GlobalFormSection>
+          </StateFormSection>
+          <StateFormSection sc-id="ClosedAttachmentSfs" type="LocalStateFormSection" renderingOrder="1">
+            <LocalFormSection sc-ref="AttachmentLfs" type="SchemaLocalFormSection" />
+          </StateFormSection>
+          <StateFormSection sc-id="ClosedBasicSfs" type="LocalStateFormSection" renderingOrder="2">
+            <LocalFormSection sc-ref="BasicLfs" type="SchemaLocalFormSection" />
+          </StateFormSection>
+          <StateFormSection sc-id="ClosedCompositeSfs" type="LocalStateFormSection" renderingOrder="3">
+            <LocalFormSection sc-ref="CompositeLfs" type="SchemaLocalFormSection" />
+          </StateFormSection>
+          <StateFormSection sc-id="ClosedDateTimeSfs" type="LocalStateFormSection" renderingOrder="4">
+            <LocalFormSection sc-ref="DateTimeLfs" type="SchemaLocalFormSection" />
+          </StateFormSection>
+          <StateFormSection sc-id="ClosedDomainSfs" type="LocalStateFormSection" renderingOrder="5">
+            <LocalFormSection sc-ref="DomainLfs" type="SchemaLocalFormSection" />
+          </StateFormSection>
+          <StateFormSection sc-id="ClosedTradingSfs" type="LocalStateFormSection" renderingOrder="6">
+            <LocalFormSection sc-ref="TradingEntitiesLfs" type="SchemaLocalFormSection" />
+          </StateFormSection>
+        </StateFormSections>
+        <ControlConfigurations />
+        <StateAutoSetOnLoads />
+      </State>
+    </States>
+    <Transitions>
+      <Transition wid="StartTran" type="StartTransition" sc-version="2">
+        <DisplayName>Start</DisplayName>
+        <Description></Description>
+        <RuleEvaluationExpression></RuleEvaluationExpression>
+        <RuleEvaluationPolicy value="And" />
+        <TransitionRuleReferences />
+        <TransitionActionReferences>
+          <TransitionActionReference type="TransitionActionReference" executionOrder="1">
+            <TransitionAction sc-ref="SubEditAcl" type="AclTransitionAction" />
+          </TransitionActionReference>
+        </TransitionActionReferences>
+        <ToState sc-ref="EditState" type="State" />
+      </Transition>
+      <Transition wid="StandardTran" type="StandardTransition" sc-version="3">
+        <DisplayName>Standard</DisplayName>
+        <Description></Description>
+        <RuleEvaluationExpression></RuleEvaluationExpression>
+        <RuleEvaluationPolicy value="And" />
+        <DoNotValidateBeforeTransitioning>False</DoNotValidateBeforeTransitioning>
+        <ValidateFormSections>False</ValidateFormSections>
+        <IsEmbeddedTransition>False</IsEmbeddedTransition>
+        <TransitionRuleReferences />
+        <TransitionActionReferences>
+          <TransitionActionReference type="TransitionActionReference" executionOrder="1">
+            <TransitionAction sc-ref="SubViewAcl" type="AclTransitionAction" />
+          </TransitionActionReference>
+          <TransitionActionReference type="TransitionActionReference" executionOrder="2">
+            <TransitionAction sc-ref="SetCertificationInstanceDateAction" type="SetDocumentCertificationDateTransitionAction" />
+          </TransitionActionReference>
+        </TransitionActionReferences>
+        <TransitionFormSections>
+          <TransitionFormSection type="GlobalTransitionFormSection">
+            <RenderingOrder>0</RenderingOrder>
+            <GlobalFormSection fid="StandardConfirmation" type="GlobalFormSectionRef">
+              <GlobalID>4e759c2d-07a4-4871-9a29-a5a600b3b272</GlobalID>
+            </GlobalFormSection>
+          </TransitionFormSection>
+        </TransitionFormSections>
+        <ToState sc-ref="ViewState" type="State" />
+        <FromState sc-ref="EditState" type="State" />
+      </Transition>
+      <Transition wid="ConditionalTran" type="ConditionalTransition" sc-version="3" evaluationOrder="1">
+        <DisplayName>Conditional</DisplayName>
+        <Description></Description>
+        <RuleEvaluationExpression></RuleEvaluationExpression>
+        <RuleEvaluationPolicy value="And" />
+        <DoNotValidateBeforeTransitioning>False</DoNotValidateBeforeTransitioning>
+        <TransitionRuleReferences />
+        <TransitionActionReferences>
+          <TransitionActionReference type="TransitionActionReference" executionOrder="1">
+            <TransitionAction sc-ref="SubClosedAcl" type="AclTransitionAction" />
+          </TransitionActionReference>
+          <TransitionActionReference type="TransitionActionReference" executionOrder="2">
+            <TransitionAction sc-ref="SetCertificationInstanceDateAction" type="SetDocumentCertificationDateTransitionAction" />
+          </TransitionActionReference>
+        </TransitionActionReferences>
+        <TransitionFormSections>
+          <TransitionFormSection type="GlobalTransitionFormSection">
+            <RenderingOrder>0</RenderingOrder>
+            <GlobalFormSection fid="StandardConfirmation" type="GlobalFormSectionRef">
+              <GlobalID>4e759c2d-07a4-4871-9a29-a5a600b3b272</GlobalID>
+            </GlobalFormSection>
+          </TransitionFormSection>
+        </TransitionFormSections>
+        <ToState sc-ref="ClosedState" type="State" />
+        <FromState sc-ref="ViewState" type="State" />
+      </Transition>
+    </Transitions>
+    <TransitionRules />
+    <TransitionActions>
+      <TransitionAction wid="SetCertificationInstanceDateAction" type="SetDocumentCertificationDateTransitionAction" sc-version="3">
+        <DisplayName>Set certification date</DisplayName>
+        <Description>Set the certification instance date</Description>
+        <PreconditionBaseCurrency>USD</PreconditionBaseCurrency>
+        <FlushPolicy value="None" />
+        <IsCertificationDateToday>False</IsCertificationDateToday>
+        <CertificationInstanceDateTimeDataTypeSid type="Sid">
+          <Sid>DateTimeDt</Sid>
+        </CertificationInstanceDateTimeDataTypeSid>
+        <SchemaElementReferences />
+      </TransitionAction>
+      <TransitionAction wid="SubClosedAcl" type="AclTransitionAction" sc-version="4">
+        <EligibleForClearOnExit>True</EligibleForClearOnExit>
+        <DisplayName>Submitter Closed Acl</DisplayName>
+        <Description></Description>
+        <PreconditionBaseCurrency>USD</PreconditionBaseCurrency>
+        <FlushPolicy value="None" />
+        <SchemaElementReferences />
+        <AclTransitionActionStateFormSections>
+          <AclTransitionActionStateFormSection type="AclTransitionActionStateFormSection">
+            <FormAcl value="SetAsReadOnly" />
+            <StateFormSection sc-ref="ClosedSfs" type="GlobalStateFormSection" />
+          </AclTransitionActionStateFormSection>
+          <AclTransitionActionStateFormSection type="AclTransitionActionStateFormSection">
+            <FormAcl value="SetAsReadOnly" />
+            <StateFormSection sc-ref="ClosedAttachmentSfs" type="LocalStateFormSection" />
+          </AclTransitionActionStateFormSection>
+          <AclTransitionActionStateFormSection type="AclTransitionActionStateFormSection">
+            <FormAcl value="SetAsReadOnly" />
+            <StateFormSection sc-ref="ClosedBasicSfs" type="LocalStateFormSection" />
+          </AclTransitionActionStateFormSection>
+          <AclTransitionActionStateFormSection type="AclTransitionActionStateFormSection">
+            <FormAcl value="SetAsReadOnly" />
+            <StateFormSection sc-ref="ClosedCompositeSfs" type="LocalStateFormSection" />
+          </AclTransitionActionStateFormSection>
+          <AclTransitionActionStateFormSection type="AclTransitionActionStateFormSection">
+            <FormAcl value="SetAsReadOnly" />
+            <StateFormSection sc-ref="ClosedDateTimeSfs" type="LocalStateFormSection" />
+          </AclTransitionActionStateFormSection>
+          <AclTransitionActionStateFormSection type="AclTransitionActionStateFormSection">
+            <FormAcl value="SetAsReadOnly" />
+            <StateFormSection sc-ref="ClosedDomainSfs" type="LocalStateFormSection" />
+          </AclTransitionActionStateFormSection>
+          <AclTransitionActionStateFormSection type="AclTransitionActionStateFormSection">
+            <FormAcl value="SetAsReadOnly" />
+            <StateFormSection sc-ref="ClosedTradingSfs" type="LocalStateFormSection" />
+          </AclTransitionActionStateFormSection>
+        </AclTransitionActionStateFormSections>
+        <AclTransitionActionStandardTransitions />
+        <AclTransitionActionConditionalTransitions />
+        <AclTransitionActionTargetPersonas>
+          <AclTransitionActionTargetPersona type="AclTransitionActionTargetPersona">
+            <Persona sc-ref="Submitter" type="Persona" />
+          </AclTransitionActionTargetPersona>
+          <AclTransitionActionTargetPersona type="AclTransitionActionTargetPersona">
+            <Persona sc-ref="Compliance" type="Persona" />
+          </AclTransitionActionTargetPersona>
+        </AclTransitionActionTargetPersonas>
+      </TransitionAction>
+      <TransitionAction wid="SubEditAcl" type="AclTransitionAction" sc-version="4">
+        <EligibleForClearOnExit>True</EligibleForClearOnExit>
+        <DisplayName>Submitter Edit Acl</DisplayName>
+        <Description></Description>
+        <PreconditionBaseCurrency>USD</PreconditionBaseCurrency>
+        <FlushPolicy value="None" />
+        <SchemaElementReferences />
+        <AclTransitionActionStateFormSections>
+          <AclTransitionActionStateFormSection type="AclTransitionActionStateFormSection">
+            <FormAcl value="SetAsReadOnly" />
+            <StateFormSection sc-ref="EditSfs" type="GlobalStateFormSection" />
+          </AclTransitionActionStateFormSection>
+          <AclTransitionActionStateFormSection type="AclTransitionActionStateFormSection">
+            <FormAcl value="SetAsReadWrite" />
+            <StateFormSection sc-ref="EditAttachmentSfs" type="LocalStateFormSection" />
+          </AclTransitionActionStateFormSection>
+          <AclTransitionActionStateFormSection type="AclTransitionActionStateFormSection">
+            <FormAcl value="SetAsReadWrite" />
+            <StateFormSection sc-ref="EditBasicSfs" type="LocalStateFormSection" />
+          </AclTransitionActionStateFormSection>
+          <AclTransitionActionStateFormSection type="AclTransitionActionStateFormSection">
+            <FormAcl value="SetAsReadWrite" />
+            <StateFormSection sc-ref="EditCompositeSfs" type="LocalStateFormSection" />
+          </AclTransitionActionStateFormSection>
+          <AclTransitionActionStateFormSection type="AclTransitionActionStateFormSection">
+            <FormAcl value="SetAsReadWrite" />
+            <StateFormSection sc-ref="EditDateTimeSfs" type="LocalStateFormSection" />
+          </AclTransitionActionStateFormSection>
+          <AclTransitionActionStateFormSection type="AclTransitionActionStateFormSection">
+            <FormAcl value="SetAsReadWrite" />
+            <StateFormSection sc-ref="EditDomainSfs" type="LocalStateFormSection" />
+          </AclTransitionActionStateFormSection>
+          <AclTransitionActionStateFormSection type="AclTransitionActionStateFormSection">
+            <FormAcl value="SetAsReadWrite" />
+            <StateFormSection sc-ref="EditTradingSfs" type="LocalStateFormSection" />
+          </AclTransitionActionStateFormSection>
+        </AclTransitionActionStateFormSections>
+        <AclTransitionActionStandardTransitions>
+          <AclTransitionActionStandardTransition type="AclTransitionActionStandardTransition">
+            <TransitionAcl value="SetAsGranted" />
+            <StandardTransition sc-ref="StandardTran" type="StandardTransition" />
+          </AclTransitionActionStandardTransition>
+        </AclTransitionActionStandardTransitions>
+        <AclTransitionActionConditionalTransitions />
+        <AclTransitionActionTargetPersonas>
+          <AclTransitionActionTargetPersona type="AclTransitionActionTargetPersona">
+            <Persona sc-ref="Submitter" type="Persona" />
+          </AclTransitionActionTargetPersona>
+          <AclTransitionActionTargetPersona type="AclTransitionActionTargetPersona">
+            <Persona sc-ref="Compliance" type="Persona" />
+          </AclTransitionActionTargetPersona>
+        </AclTransitionActionTargetPersonas>
+      </TransitionAction>
+      <TransitionAction wid="SubViewAcl" type="AclTransitionAction" sc-version="4">
+        <EligibleForClearOnExit>True</EligibleForClearOnExit>
+        <DisplayName>Submitter View Acl</DisplayName>
+        <Description></Description>
+        <PreconditionBaseCurrency>USD</PreconditionBaseCurrency>
+        <FlushPolicy value="None" />
+        <SchemaElementReferences />
+        <AclTransitionActionStateFormSections>
+          <AclTransitionActionStateFormSection type="AclTransitionActionStateFormSection">
+            <FormAcl value="SetAsReadOnly" />
+            <StateFormSection sc-ref="ViewSfs" type="GlobalStateFormSection" />
+          </AclTransitionActionStateFormSection>
+          <AclTransitionActionStateFormSection type="AclTransitionActionStateFormSection">
+            <FormAcl value="SetAsReadOnly" />
+            <StateFormSection sc-ref="ViewAttachmentSfs" type="LocalStateFormSection" />
+          </AclTransitionActionStateFormSection>
+          <AclTransitionActionStateFormSection type="AclTransitionActionStateFormSection">
+            <FormAcl value="SetAsReadOnly" />
+            <StateFormSection sc-ref="ViewBasicSfs" type="LocalStateFormSection" />
+          </AclTransitionActionStateFormSection>
+          <AclTransitionActionStateFormSection type="AclTransitionActionStateFormSection">
+            <FormAcl value="SetAsReadOnly" />
+            <StateFormSection sc-ref="ViewCompositeSfs" type="LocalStateFormSection" />
+          </AclTransitionActionStateFormSection>
+          <AclTransitionActionStateFormSection type="AclTransitionActionStateFormSection">
+            <FormAcl value="SetAsReadOnly" />
+            <StateFormSection sc-ref="ViewDateTimeSfs" type="LocalStateFormSection" />
+          </AclTransitionActionStateFormSection>
+          <AclTransitionActionStateFormSection type="AclTransitionActionStateFormSection">
+            <FormAcl value="SetAsReadOnly" />
+            <StateFormSection sc-ref="ViewDomainSfs" type="LocalStateFormSection" />
+          </AclTransitionActionStateFormSection>
+          <AclTransitionActionStateFormSection type="AclTransitionActionStateFormSection">
+            <FormAcl value="SetAsReadOnly" />
+            <StateFormSection sc-ref="ViewTradingSfs" type="LocalStateFormSection" />
+          </AclTransitionActionStateFormSection>
+        </AclTransitionActionStateFormSections>
+        <AclTransitionActionStandardTransitions />
+        <AclTransitionActionConditionalTransitions>
+          <AclTransitionActionConditionalTransition type="AclTransitionActionConditionalTransition">
+            <TransitionAcl value="SetAsGranted" />
+            <State sc-ref="ViewState" type="State" />
+          </AclTransitionActionConditionalTransition>
+        </AclTransitionActionConditionalTransitions>
+        <AclTransitionActionTargetPersonas>
+          <AclTransitionActionTargetPersona type="AclTransitionActionTargetPersona">
+            <Persona sc-ref="Submitter" type="Persona" />
+          </AclTransitionActionTargetPersona>
+          <AclTransitionActionTargetPersona type="AclTransitionActionTargetPersona">
+            <Persona sc-ref="Compliance" type="Persona" />
+          </AclTransitionActionTargetPersona>
+        </AclTransitionActionTargetPersonas>
+      </TransitionAction>
+    </TransitionActions>
+    <WorkflowPersonas>
+      <Persona wid="Submitter" type="Persona">
+        <DisplayName>Submitter</DisplayName>
+        <Description></Description>
+        <IsWorkflowOwnerCreatorPersona>True</IsWorkflowOwnerCreatorPersona>
+        <IsWorkflowProxyCreatorPersona>True</IsWorkflowProxyCreatorPersona>
+        <Options type="PersonaOptions">
+          <CanExportToPdf>True</CanExportToPdf>
+        </Options>
+        <WorkflowPersonaUserAccountSubjects>
+          <WorkflowPersonaUserAccountSubject type="WorkflowPersonaDocumentOwnerOrCreatorMember">
+            <Action value="SetAsInclude" />
+            <DocumentOwnerOrCreator type="DocumentOwnerOrCreator">
+              <WhichUserToSet value="DocumentOwner" />
+            </DocumentOwnerOrCreator>
+          </WorkflowPersonaUserAccountSubject>
+          <WorkflowPersonaUserAccountSubject type="WorkflowPersonaDocumentOwnerOrCreatorMember">
+            <Action value="SetAsInclude" />
+            <DocumentOwnerOrCreator type="DocumentOwnerOrCreator">
+              <WhichUserToSet value="DocumentCreator" />
+            </DocumentOwnerOrCreator>
+          </WorkflowPersonaUserAccountSubject>
+        </WorkflowPersonaUserAccountSubjects>
+      </Persona>
+      <Persona wid="Compliance" type="Persona">
+        <DisplayName>Compliance</DisplayName>
+        <Description></Description>
+        <IsWorkflowOwnerCreatorPersona>False</IsWorkflowOwnerCreatorPersona>
+        <IsWorkflowProxyCreatorPersona>False</IsWorkflowProxyCreatorPersona>
+        <Options type="PersonaOptions">
+          <CanExportToPdf>True</CanExportToPdf>
+        </Options>
+        <WorkflowPersonaUserAccountSubjects>
+          <WorkflowPersonaUserAccountSubject type="WorkflowPersonaDocumentOwnerOrCreatorMember">
+            <Action value="SetAsExclude" />
+            <DocumentOwnerOrCreator type="DocumentOwnerOrCreator">
+              <WhichUserToSet value="DocumentOwner" />
+            </DocumentOwnerOrCreator>
+          </WorkflowPersonaUserAccountSubject>
+          <WorkflowPersonaUserAccountSubject type="WorkflowPersonaDocumentOwnerOrCreatorMember">
+            <Action value="SetAsExclude" />
+            <DocumentOwnerOrCreator type="DocumentOwnerOrCreator">
+              <WhichUserToSet value="DocumentCreator" />
+            </DocumentOwnerOrCreator>
+          </WorkflowPersonaUserAccountSubject>
+        </WorkflowPersonaUserAccountSubjects>
+      </Persona>
+    </WorkflowPersonas>
+  </Workflow>
+  <FormSections>
+    <FormSection fid="AttachmentLfs" type="SchemaLocalFormSection" forSid="AttachmentDataTypesSection">
+      <Source><![CDATA[
+<div class="star-form-heading text-uppercase">
+    @Html.SectionDisplayName()
+</div>
+
+
+<div class="star-form-section">
+
+
+  <div class="form-group form-group-sm">
+      @Html.LabelFor("AttachmentDt", "star-form-label")
+      @Html.DataType("AttachmentDt")
+      @Html.NotificationsFor("AttachmentDt")
+  </div>
+
+
+  <div class="form-group form-group-sm">
+      @Html.LabelFor("MultiAttachmentDt", "star-form-label")
+      @Html.DataType("MultiAttachmentDt")
+      @Html.NotificationsFor("MultiAttachmentDt")
+  </div>
+
+
+</div>
+
+]]></Source>
+      <DisplayName>Attachment DataTypes Section</DisplayName>
+      <Description></Description>
+    </FormSection>
+    <FormSection fid="BasicLfs" type="SchemaLocalFormSection" forSid="BasicDataTypesSection">
+      <Source><![CDATA[
+<div class="star-form-heading text-uppercase">
+    @Html.SectionDisplayName()
+</div>
+
+
+<div class="star-form-section">
+
+
+  <div class="form-group form-group-sm">
+      @Html.LabelFor("BooleanDt", "star-form-label")
+      @Html.DataType("BooleanDt")
+      @Html.NotificationsFor("BooleanDt")
+  </div>
+
+
+  <div class="form-group form-group-sm">
+      @Html.LabelFor("DecimalDt", "star-form-label")
+      @Html.DataType("DecimalDt")
+      @Html.NotificationsFor("DecimalDt")
+  </div>
+
+
+  <div class="form-group form-group-sm">
+      @Html.LabelFor("IntegerDt", "star-form-label")
+      @Html.DataType("IntegerDt")
+      @Html.NotificationsFor("IntegerDt")
+  </div>
+
+
+  <div class="form-group form-group-sm">
+      @Html.LabelFor("ListDt", "star-form-label")
+      @Html.DataType("ListDt")
+      @Html.NotificationsFor("ListDt")
+  </div>
+
+
+  <div class="form-group form-group-sm">
+      @Html.LabelFor("MemoDt", "star-form-label")
+      @Html.DataType("MemoDt")
+      @Html.NotificationsFor("MemoDt")
+  </div>
+
+
+  <div class="form-group form-group-sm">
+      @Html.LabelFor("MultiTextListDt", "star-form-label")
+      @Html.DataType("MultiTextListDt")
+      @Html.NotificationsFor("MultiTextListDt")
+  </div>
+
+
+  <div class="form-group form-group-sm">
+      @Html.LabelFor("PercentageDt", "star-form-label")
+      @Html.DataType("PercentageDt")
+      @Html.NotificationsFor("PercentageDt")
+  </div>
+
+
+  <div class="form-group form-group-sm">
+      @Html.LabelFor("TextDt", "star-form-label")
+      @Html.DataType("TextDt")
+      @Html.NotificationsFor("TextDt")
+  </div>
+
+
+  <div class="form-group form-group-sm">
+      @Html.LabelFor("TextListDt", "star-form-label")
+      @Html.DataType("TextListDt")
+      @Html.NotificationsFor("TextListDt")
+  </div>
+
+
+</div>
+
+]]></Source>
+      <DisplayName>Basic DataTypes Section</DisplayName>
+      <Description></Description>
+    </FormSection>
+    <FormSection fid="CompositeLfs" type="SchemaLocalFormSection" forSid="CompositeDataTypesSection">
+      <Source><![CDATA[
+<div class="star-form-heading text-uppercase">
+    @Html.SectionDisplayName()
+</div>
+
+
+<div class="star-form-section">
+
+
+  <div class="form-group form-group-sm">
+      @Html.LabelFor("WebAddressDt", "star-form-label")
+      @Html.DataType("WebAddressDt")
+      @Html.NotificationsFor("WebAddressDt")
+  </div>
+
+
+</div>
+
+]]></Source>
+      <DisplayName>Composite DataTypes Section</DisplayName>
+      <Description></Description>
+    </FormSection>
+    <FormSection fid="DateTimeLfs" type="SchemaLocalFormSection" forSid="DateTimeDataTypesSection">
+      <Source><![CDATA[
+<div class="star-form-heading text-uppercase">
+    @Html.SectionDisplayName()
+</div>
+
+
+<div class="star-form-section">
+
+
+  <div class="form-group form-group-sm">
+      @Html.LabelFor("DateDt", "star-form-label")
+      @Html.DataType("DateDt")
+      @Html.NotificationsFor("DateDt")
+  </div>
+
+
+  <div class="form-group form-group-sm">
+      @Html.LabelFor("DateTimeDt", "star-form-label")
+      @Html.DataType("DateTimeDt")
+      @Html.NotificationsFor("DateTimeDt")
+  </div>
+
+
+  <div class="form-group form-group-sm">
+      @Html.LabelFor("PeriodFrequencyDt", "star-form-label")
+      @Html.DataType("PeriodFrequencyDt")
+      @Html.NotificationsFor("PeriodFrequencyDt")
+  </div>
+
+
+  <div class="form-group form-group-sm">
+      @Html.LabelFor("TimeZoneDateTimeDt", "star-form-label")
+      @Html.DataType("TimeZoneDateTimeDt")
+      @Html.NotificationsFor("TimeZoneDateTimeDt")
+  </div>
+
+
+</div>
+
+]]></Source>
+      <DisplayName>Date Time DataTypes Section</DisplayName>
+      <Description></Description>
+    </FormSection>
+    <FormSection fid="DomainLfs" type="SchemaLocalFormSection" forSid="DomainDataTypesSection">
+      <Source><![CDATA[
+<div class="star-form-heading text-uppercase">
+    @Html.SectionDisplayName()
+</div>
+
+
+<div class="star-form-section">
+
+
+  <div class="form-group form-group-sm">
+      @Html.LabelFor("AutoLineOfBusinessDt", "star-form-label")
+      @Html.DataType("AutoLineOfBusinessDt")
+      @Html.NotificationsFor("AutoLineOfBusinessDt")
+  </div>
+
+
+  <div class="form-group form-group-sm">
+      @Html.LabelFor("AutoOfficeDt", "star-form-label")
+      @Html.DataType("AutoOfficeDt")
+      @Html.NotificationsFor("AutoOfficeDt")
+  </div>
+
+
+  <div class="form-group form-group-sm">
+      @Html.LabelFor("AutoUserAccountDt", "star-form-label")
+      @Html.DataType("AutoUserAccountDt")
+      @Html.NotificationsFor("AutoUserAccountDt")
+  </div>
+
+
+  <div class="form-group form-group-sm">
+      @Html.LabelFor("GridReportingDataType", "star-form-label")
+      @Html.DataType("GridReportingDataType")
+      @Html.NotificationsFor("GridReportingDataType")
+  </div>
+
+
+  <div class="form-group form-group-sm">
+      @Html.LabelFor("ContactDt", "star-form-label")
+      @Html.DataType("ContactDt")
+      @Html.NotificationsFor("ContactDt")
+  </div>
+
+
+  <div class="form-group form-group-sm">
+      @Html.LabelFor("CountryDt", "star-form-label")
+      @Html.DataType("CountryDt")
+      @Html.NotificationsFor("CountryDt")
+  </div>
+
+
+  <div class="form-group form-group-sm">
+      @Html.LabelFor("MoneyDt", "star-form-label")
+      @Html.DataType("MoneyDt")
+      @Html.NotificationsFor("MoneyDt")
+  </div>
+
+
+  <div class="form-group form-group-sm">
+      @Html.LabelFor("MultiContactDt", "star-form-label")
+      @Html.DataType("MultiContactDt")
+      @Html.NotificationsFor("MultiContactDt")
+  </div>
+
+
+  <div class="form-group form-group-sm">
+      @Html.LabelFor("MultiOrganizationDt", "star-form-label")
+      @Html.DataType("MultiOrganizationDt")
+      @Html.NotificationsFor("MultiOrganizationDt")
+  </div>
+
+
+  <div class="form-group form-group-sm">
+      @Html.LabelFor("MultiUserDt", "star-form-label")
+      @Html.DataType("MultiUserDt")
+      @Html.NotificationsFor("MultiUserDt")
+  </div>
+
+
+  <div class="form-group form-group-sm">
+      @Html.LabelFor("MultiBusinessProcessDt", "star-form-label")
+      @Html.DataType("MultiBusinessProcessDt")
+      @Html.NotificationsFor("MultiBusinessProcessDt")
+  </div>
+
+
+  <div class="form-group form-group-sm">
+      @Html.LabelFor("OfficeDt", "star-form-label")
+      @Html.DataType("OfficeDt")
+      @Html.NotificationsFor("OfficeDt")
+  </div>
+
+
+  <div class="form-group form-group-sm">
+      @Html.LabelFor("OrganizationDt", "star-form-label")
+      @Html.DataType("OrganizationDt")
+      @Html.NotificationsFor("OrganizationDt")
+  </div>
+
+
+  <div class="form-group form-group-sm">
+      @Html.LabelFor("PersonaMemberDt", "star-form-label")
+      @Html.DataType("PersonaMemberDt")
+      @Html.NotificationsFor("PersonaMemberDt")
+  </div>
+
+
+  <div class="form-group form-group-sm">
+      @Html.LabelFor("SecurityDt", "star-form-label")
+      @Html.DataType("SecurityDt")
+      @Html.NotificationsFor("SecurityDt")
+  </div>
+
+
+  <div class="form-group form-group-sm">
+      @Html.LabelFor("UserAccountDt", "star-form-label")
+      @Html.DataType("UserAccountDt")
+      @Html.NotificationsFor("UserAccountDt")
+  </div>
+
+
+  <div class="form-group form-group-sm">
+      @Html.LabelFor("UserGroupDt", "star-form-label")
+      @Html.DataType("UserGroupDt")
+      @Html.NotificationsFor("UserGroupDt")
+  </div>
+
+
+  <div class="form-group form-group-sm">
+      @Html.LabelFor("MultiUserGroupDt", "star-form-label")
+      @Html.DataType("MultiUserGroupDt")
+      @Html.NotificationsFor("MultiUserGroupDt")
+  </div>
+
+
+</div>
+
+]]></Source>
+      <DisplayName>Domain DataTypes section</DisplayName>
+      <Description></Description>
+    </FormSection>
+    <FormSection fid="TradingEntitiesLfs" type="SchemaLocalFormSection" forSid="TradingEntitiesDataTypesSection">
+      <Source><![CDATA[
+<div class="star-form-heading text-uppercase">
+    @Html.SectionDisplayName()
+</div>
+
+
+<div class="star-form-section">
+
+
+  <div class="form-group form-group-sm">
+      @Html.LabelFor("BrokerAccountNameDt", "star-form-label")
+      @Html.DataType("BrokerAccountNameDt")
+      @Html.NotificationsFor("BrokerAccountNameDt")
+  </div>
+
+
+  <div class="form-group form-group-sm">
+      @Html.LabelFor("BrokerAccountNumberDt", "star-form-label")
+      @Html.DataType("BrokerAccountNumberDt")
+      @Html.NotificationsFor("BrokerAccountNumberDt")
+  </div>
+
+
+  <div class="form-group form-group-sm">
+      @Html.LabelFor("BrokerAccountTypeDt", "star-form-label")
+      @Html.DataType("BrokerAccountTypeDt")
+      @Html.NotificationsFor("BrokerAccountTypeDt")
+  </div>
+
+
+  <div class="form-group form-group-sm">
+      @Html.LabelFor("BrokerOfficeDt", "star-form-label")
+      @Html.DataType("BrokerOfficeDt")
+      @Html.NotificationsFor("BrokerOfficeDt")
+  </div>
+
+
+</div>
+
+]]></Source>
+      <DisplayName>Trading Entities DataTypes Section</DisplayName>
+      <Description></Description>
+    </FormSection>
+  </FormSections>
+  <GlobalStyleSheet tid="StarDefault" type="GlobalStyleSheetRef">
+    <GlobalID>665c87f5-dbd6-4cdf-8aea-a5a600b3d1fb</GlobalID>
+  </GlobalStyleSheet>
+</BusinessProcessVersion>
